@@ -1,0 +1,166 @@
+// Custon colors
+
+$gold: gold;//rgb(47, 128, 39); // rgb(25, 128, 16);
+$velvet: rgb(179, 0, 0);
+$leather-top: rgb(155, 76, 30);
+$leather-bottom: rgb(136, 65, 24);
+
+// Boostrap and custom variable assiginments
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+$theme-colors: (
+  g: $gold,
+  v: $velvet,
+  lt: $leather-top,
+  lb: $leather-bottom
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+// Font Awesome 5.14.0
+@import "../fontawesome/scss/fontawesome.scss";
+@import "../fontawesome/scss/solid.scss";
+@import "../fontawesome/scss/regular.scss";
+@import "../fontawesome/scss/brands.scss";
+
+// Global
+
+html, body {
+  height: 100vh;
+  background: url("../images/body.jpg");
+  background-size: cover;
+  //background: linear-gradient($leather-bottom 20%, $leather-top 90%, $leather-bottom);
+}
+
+// Header
+
+header {
+  font-family: 'Fondamento', cursive;
+  box-shadow: 0 0 20px grey;
+  background: url("../images/header.jpg");
+  background-size: cover;
+  //background: linear-gradient($leather-top, $leather-bottom, $leather-top);
+}
+
+.book-add {
+  font-size: .7em;
+  transition: ease .2s font-size;
+}
+
+.book-add:hover {
+  font-size: .8em;
+}
+
+.bookshelf {
+  gap: 50px;
+  margin-bottom: 56px;
+}
+
+// Book
+
+
+.book {
+  font-family: 'Inconsolata', monospace;
+  color: $gold;
+  max-width: 200px;
+  min-height: 300px;
+  max-height: 300px;
+  background: url("../images/book.jpg");
+  background-size: cover;
+  // background: linear-gradient(to bottom left, $velvet, rgb(218, 15, 15), $velvet);
+  box-shadow: 0 0 10px grey;
+  position: relative;
+  overflow: hidden;
+}
+
+.bookmark {
+  position: absolute;
+  font-size: 3em;
+  color: red;
+  right: 10px;
+}
+
+.book-title {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-weight: 800;
+  width: 50%;
+}
+
+.book-info {
+  padding-left: 10px;
+  gap: 20px;
+}
+
+.book-datum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-read {
+  font-size: 3em;
+}
+
+.book-remove {
+  position: absolute;
+  bottom: -46px;
+  right: -46px;
+  font-size: 2em;
+  color: rgb(207, 192, 192);
+  padding: 6px 11px;
+  border: 1px solid rgb(207, 192, 192);
+  border-radius: 50%;
+  transition: ease-in-out bottom .8s, ease right .5s;
+}
+
+.book:hover .book-remove {
+  bottom: 17px;
+  right: 41px;
+  animation-duration: 2s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Footer 
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 56px;
+  width: 100%;
+  background: url("../images/header.jpg");
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.credits, .credit {
+  color: gold;
+}
+
+.credits {
+  margin: 0;
+  padding: 5px;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 800;
+}
+
+.credit:hover {
+  color: gold;
+}
