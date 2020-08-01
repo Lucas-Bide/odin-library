@@ -1,0 +1,1 @@
+This Odin Project explores JavaScript's constructor. It consists of  a library with a "book" contructor function. The user can add books, entering some details, say whether they've read books, or delete them. 
