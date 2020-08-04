@@ -16611,15 +16611,8 @@ header {
 .book {
   font-family: "Inconsolata", monospace;
   color: gold;
-<<<<<<< HEAD
   width: 200px;
   height: 300px;
-=======
-  max-width: 200px;
-  min-width: 200px;
-  min-height: 300px;
-  max-height: 300px;
->>>>>>> 6659a753cd4bbf4e9b6beb010ad0e7250093c668
   background: url("../images/book.jpg");
   background-size: cover;
   box-shadow: 0 0 10px grey;
