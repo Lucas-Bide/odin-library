@@ -30,12 +30,10 @@ $theme-colors: (
 
 // Global
 
-html, body {
-  height: 100vh;
+body {
   color: gold;
-  background: url("../images/body.jpg");
+  background: url("../images/body.jpg") 0 0 no-repeat;
   background-size: cover;
-  //background: linear-gradient($leather-bottom 20%, $leather-top 90%, $leather-bottom);
 }
 
 // Header
