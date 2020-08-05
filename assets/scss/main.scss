@@ -67,7 +67,7 @@ header {
   gap: 50px;
   margin: 64px 0 56px 0;
   padding-top: 30px;
-  height: 100%;
+  height: max-content;
 }
 
 // Form
@@ -100,7 +100,6 @@ header {
 }
 
 // Book
-
 
 .book {
   font-family: 'Inconsolata', monospace;
@@ -161,7 +160,7 @@ header {
   transition: bottom .5s, right .5s, font-size .5s, padding .5s;
 }
 
-.book:hover .book-remove {
+.book:hover .book-remove, .book:focus .book-remove {
   bottom: 17px;
   right:43px;
   font-size: 2em;
@@ -171,7 +170,7 @@ header {
 
 }
 
-.book:hover .book-remove:hover {
+.book:hover .book-remove:hover, .book:focus .book-remove {
   animation: infinite 2s linear spin, infinite 1s linear shrink;
   color: gold;
   border-color: gold;

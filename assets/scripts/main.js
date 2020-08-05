@@ -85,6 +85,7 @@ function render() {
     let frame = document.createElement("div");
     frame.classList.add("book", "card", "flex-row");
     frame.setAttribute("data-index", i);
+    frame.setAttribute("tabindex", 0);
     bookshelf.appendChild(frame);
 
     let bookmark = document.createElement("div");
@@ -152,9 +153,11 @@ function render() {
 
 // Filler
 
-let book1 = new Book("Observations", "Saint George", 2000, true);
-let book2 = new Book("Observations 2", "Saint George", 5000, false);
-myLibrary.push(book1, book2);
+for (let i = 0; i < 5; i++) {
+  let n = i + 1;
+  let book = new Book("Observations " + n , "Saint George", n * 1000, true);
+myLibrary.push(book);
+}
 render();
 
 /*

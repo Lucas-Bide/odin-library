@@ -16578,7 +16578,7 @@ header {
   gap: 50px;
   margin: 64px 0 56px 0;
   padding-top: 30px;
-  height: 100%;
+  height: max-content;
 }
 
 .book-form {
@@ -16666,7 +16666,7 @@ header {
   transition: bottom 0.5s, right 0.5s, font-size 0.5s, padding 0.5s;
 }
 
-.book:hover .book-remove {
+.book:hover .book-remove, .book:focus .book-remove {
   bottom: 17px;
   right: 43px;
   font-size: 2em;
@@ -16675,7 +16675,7 @@ header {
   animation: infinite 4s linear spin;
 }
 
-.book:hover .book-remove:hover {
+.book:hover .book-remove:hover, .book:focus .book-remove {
   animation: infinite 2s linear spin, infinite 1s linear shrink;
   color: gold;
   border-color: gold;
